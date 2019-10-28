@@ -105,6 +105,9 @@ header {
   width: 80%;
   margin: 0 10% 90px 10%;
 }
+.text-wrap p {
+  margin: 30px 0 0 0;
+}
 
 /* intro */
 .row {
@@ -119,4 +122,18 @@ header {
   flex: 31%;
   max-width: 31%;
   background: rgb(105, 91, 27);
+}
+
+/* newsletter */
+.col-img {
+  align-self: center;
+  flex: 30%;
+  max-width: 30%;
+}
+.col-text {
+  flex: 65%;
+  max-width: 65%;
+}
+.col-img img {
+  width: 100%;
 }
