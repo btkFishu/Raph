@@ -164,6 +164,7 @@ header {
   background: rgb(79, 130, 149);
   border: 4px solid rgb(99, 143, 160);
   box-shadow: 5px 5px 2px rgb(183, 203, 211);
+  margin-bottom: 0;
 }
 #newsletter-form p {
   margin-top: 19px;
@@ -201,7 +202,6 @@ header {
   margin-top: 7px;
   background: var(--button-color);
   color: white;
-  outline: none;
   border: none;
   border-radius: 7px;  
   text-transform: uppercase;
@@ -211,4 +211,17 @@ header {
   background: rgb(221, 117, 69);
   color: white;
   cursor: pointer;
+}
+
+/* footer */
+footer {
+  margin-top: 70px;
+  min-height: 40px;
+  background: rgb(29, 55, 65);
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  padding: 7px 0;
+  color: rgba(255, 255, 255, 0.438);
 }
