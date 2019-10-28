@@ -222,6 +222,7 @@ footer {
 }
 footer p {
   margin: 0;
-  padding: 7px 0;
+  padding: 9px 0;
   color: rgba(255, 255, 255, 0.438);
+  font-size: 14px;
 }
