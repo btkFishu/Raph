@@ -8,6 +8,8 @@
 }
 :root {
   --text-color: #383651;
+  --button-color: rgb(184, 87, 42);
+  --highlight-color: rgb(230, 160, 49);
 }
 body, ul, li {
   padding: 0;
@@ -24,6 +26,14 @@ body, ul, li {
 a {
   text-decoration: none;
 }
+main h2:after {
+  display: block;
+  content: '';
+  width: 70px;
+  height: 1px;
+  border-top: 4px solid var(--highlight-color);
+  margin: 40px auto;
+}
 
 /* nav */
 nav {
@@ -36,6 +46,7 @@ h1 {
   margin: 0;
   font-weight: bold;
   font-size: 30px;
+  user-select: none;
 }
 h2 {
   margin: 0;
@@ -51,8 +62,12 @@ h2 {
 nav li {
   float: left;
   margin-left: 37px;
+  padding-bottom: 4px;
   list-style: none;
   text-transform: uppercase;
+}
+nav li:hover {
+  border-bottom: 4px solid var(--highlight-color);
 }
 nav ul:after {
   display: block;
@@ -94,6 +109,10 @@ header {
   text-transform: uppercase;
   background: rgb(184, 87, 42);
   color: white;
+  transition: background .2s linear;
+}
+#header-text a:hover {
+  background: rgb(221, 117, 69);
 }
 
 
@@ -136,6 +155,7 @@ header {
 }
 .col-img img {
   width: 100%;
+  user-select: none;
 }
 
 /* newsletter form */
@@ -172,12 +192,23 @@ header {
   border: 2px solid rgb(78, 123, 139);
   outline: none;
   text-align: center;
+  border-radius: 7px;
+}
+#email-input:focus {
+  border: 2px solid rgb(131, 171, 185);
 }
 #sign-up {
   margin-top: 7px;
-  border: 2px solid rgb(189, 95, 51);
-  background: rgb(184, 87, 42);
+  background: var(--button-color);
   color: white;
   outline: none;
+  border: none;
+  border-radius: 7px;  
   text-transform: uppercase;
+  transition: background .2s linear;
+}
+#sign-up:hover {
+  background: rgb(221, 117, 69);
+  color: white;
+  cursor: pointer;
 }
