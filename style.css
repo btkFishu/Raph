@@ -194,6 +194,8 @@ header {
   outline: none;
   text-align: center;
   border-radius: 7px;
+  transition: border .3s linear,
+              color .3s linear;
 }
 #email-input:focus {
   border: 2px solid rgb(131, 171, 185);
