@@ -70,11 +70,20 @@ nav li {
   margin-left: 37px;
   list-style: none;
 }
+nav li i {
+  transition: color .1s linear;
+}
 nav li:first-child i {
   color: #F00;
 }
+nav li:first-child i:hover {
+  color: #B00;
+}
 nav li:last-child i {
   color: #333;
+}
+nav li:last-child i:hover {
+  color: #111
 }
 nav ul:after {
   display: block;
