@@ -83,7 +83,7 @@ nav li:last-child i {
   color: #333;
 }
 nav li:last-child i:hover {
-  color: #111
+  color: #000
 }
 nav ul:after {
   display: block;
