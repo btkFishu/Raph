@@ -34,6 +34,11 @@ main h2:after {
   border-top: 4px solid var(--highlight-color);
   margin: 40px auto;
 }
+/* icons size */
+i {
+  font-size: 26px;
+}
+
 
 /* nav */
 nav {
@@ -58,17 +63,18 @@ h2 {
 }
 #links {
   float: right;
-  padding-top: 16px;
+  padding-top: 14px;
 }
 nav li {
   float: left;
   margin-left: 37px;
-  padding-bottom: 4px;
   list-style: none;
-  text-transform: uppercase;
 }
-nav li:hover {
-  border-bottom: 4px solid var(--highlight-color);
+nav li:first-child i {
+  color: #F00;
+}
+nav li:last-child i {
+  color: #333;
 }
 nav ul:after {
   display: block;
