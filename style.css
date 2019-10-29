@@ -7,9 +7,10 @@
   font-size: 19px;
 }
 :root {
-  --text-color: #383651;
-  --button-color: rgb(184, 87, 42);
-  --highlight-color: rgb(230, 160, 49);
+  --text-color: rgb(31, 30, 37);
+  --button-color: rgb(31, 136, 185);
+  --button-hover-color: rgb(2, 87, 154);
+  --highlight-color: rgb(2, 87, 154);
 }
 body, ul, li {
   padding: 0;
@@ -29,9 +30,10 @@ a {
 main h2:after {
   display: block;
   content: '';
-  width: 70px;
+  width: 86px;
   height: 1px;
-  border-top: 4px solid var(--highlight-color);
+  border-bottom: 4px solid var(--highlight-color);
+  border-radius: 55px;
   margin: 40px auto;
 }
 /* icons size */
@@ -60,6 +62,7 @@ h2 {
 }
 #logo img {
   height: 100%;
+  user-select: none;
 }
 #links {
   float: right;
@@ -83,7 +86,7 @@ nav li:last-child i {
   color: #333;
 }
 nav li:last-child i:hover {
-  color: #000
+  color: #000;
 }
 nav ul:after {
   display: block;
@@ -136,12 +139,12 @@ header {
   padding: 10px 40px;
   border: none;
   text-transform: uppercase;
-  background: rgb(221, 117, 69);
+  background: var(--button-color);
   color: white;
   transition: background .2s linear;
 }
 #sign-up:hover {
-  background: rgb(184, 87, 42);
+  background: var(--button-hover-color);
   cursor: pointer;
 }
 
@@ -192,12 +195,12 @@ header {
 footer {
   margin-top: 70px;
   min-height: 40px;
-  background: rgb(29, 55, 65);
+  background: rgb(11, 9, 12);
   text-align: center;
 }
 footer p {
   margin: 0;
   padding: 9px 0;
-  color: rgba(255, 255, 255, 0.438);
+  color: rgba(255, 255, 255, 0.335);
   font-size: 14px;
 }
