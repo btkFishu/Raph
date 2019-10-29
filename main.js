@@ -18,13 +18,15 @@ function validate() {
 
   // check if email is valid
   if(validateEmail(email)) {
-    btn.innerHTML = 'Thank you!';
+    btn.innerHTML = 'Done!';
     btn.disabled = true;
     btn.style.cursor = 'default';
+    emailInput.style.padding = '8px 38px'
     emailInput.style.border = '2px solid rgb(89, 206, 53)';
     getMail = email;
   } else {
-    emailInput.style.border = '2px solid rgb(180, 31, 31)';
+    emailInput.style.padding = '8px 38px'
+    emailInput.style.border = '2px solid #F00';
     btn.innerHTML = 'Try again';
   }
 

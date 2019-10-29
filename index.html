@@ -25,9 +25,15 @@
     <header>
       <div class="wrapper">
         <div id="header-text">
-          <h2>Enim molestias fugit architecto sit</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim molestias fugit architecto. Cum dolorum nobis similique, doloribus exercitationem atque ullam, doloremque, suscipit saepe unde perspiciatis consectetur impedit? Illo, debitis tempora!</p>
-          <a href="#newsletter">Sign up</a>          
+          <div>
+            <h2>Sign up for</h2>
+            <h2>Newsletter</h2>
+          </div>
+          <p>Join our squad and be notified about all news. Master your skills with us.</p>
+          <form id="newsletter-form">
+            <input id="email-input" type="email" placeholder="Enter your email">
+            <button id="sign-up" onclick="validate()">Sign up</button>
+          </form>         
         </div>
       </div>
     </header>
@@ -54,15 +60,6 @@
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, voluptatum perspiciatis. Natus mollitia facere sunt exercitationem quam dolor veniam obcaecati nihil.</p>
             </div>
           </div>          
-        </div>
-
-        <div id="newsletter-form" class="text-wrap">
-          <form>
-            <h3>Sign up for Newsletter</h3>
-            <p>Join our squad and be notified about all news.</p>
-            <input id="email-input" type="email" placeholder="Enter your email">
-            <button onclick="validate()" id="sign-up">Sign up</button>
-          </form>
         </div>
       </section>
     </main>

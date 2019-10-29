@@ -93,13 +93,13 @@ header {
 #header-text {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  
+  justify-content: center;
+  align-content: space-between;
   height: 370px;
   width: 40%;
   min-width: 300px;
-  padding: 9px;  
-  border: 6px solid white;
-  background: rgba(207, 207, 207, 0.822);
+  padding: 15px 30px;  
+  background: rgba(255, 255, 255, 0.705);
 }
 #header-text p, #header-text h2 {
   display: block;  
@@ -109,17 +109,31 @@ header {
 #header-text p {
   margin: 0;
 }
-#header-text a {
+/* newsletter form */
+#newsletter-form {
+  width: 100%;
+}
+#email-input {
+  width: 80%;
+  text-align: center;
+  background: rgba(138, 136, 136, 0.37);
+  border: none;
+  padding: 10px 20px;
+}
+#sign-up {
   display: block;
   height: 42px;
+  margin: 10px auto 0 auto;
   padding: 10px 40px;
+  border: none;
   text-transform: uppercase;
-  background: rgb(184, 87, 42);
+  background: rgb(221, 117, 69);
   color: white;
   transition: background .2s linear;
 }
-#header-text a:hover {
-  background: rgb(221, 117, 69);
+#sign-up:hover {
+  background: rgb(184, 87, 42);
+  cursor: pointer;
 }
 
 
@@ -163,63 +177,6 @@ header {
 .col-img img {
   width: 100%;
   user-select: none;
-}
-
-/* newsletter form */
-#newsletter-form {
-  height: 280px;
-  background: rgb(79, 130, 149);
-  border: 4px solid rgb(99, 143, 160);
-  box-shadow: 5px 5px 2px rgb(183, 203, 211);
-  margin-bottom: 0;
-}
-#newsletter-form p {
-  margin-top: 19px;
-}
-#newsletter-form p, #newsletter-form h3 {
-  color: white;
-}
-#newsletter-form form {
-  height: 100%;
-  overflow: hidden;
-}
-#newsletter-form h3 {
-  margin: 0;
-  padding: 30px 0 0 0;
-  font-size: 23px;
-}
-#sign-up, #email-input {
-  width: 60%;
-  max-width: 500px;
-  min-width: 300px;
-  padding: 10px 30px;
-  font-weight: bold;
-}
-#email-input {
-  margin-top: 50px;
-  border: 2px solid rgb(78, 123, 139);
-  outline: none;
-  text-align: center;
-  border-radius: 7px;
-  transition: border .3s linear,
-              color .3s linear;
-}
-#email-input:focus {
-  border: 2px solid rgb(131, 171, 185);
-}
-#sign-up {
-  margin-top: 7px;
-  background: var(--button-color);
-  color: white;
-  border: none;
-  border-radius: 7px;  
-  text-transform: uppercase;
-  transition: background .2s linear;
-}
-#sign-up:hover {
-  background: rgb(221, 117, 69);
-  color: white;
-  cursor: pointer;
 }
 
 /* footer */
