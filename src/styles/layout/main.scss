@@ -1,0 +1,40 @@
+#intro,
+#newsletter {
+  margin-top: var(--section-margin);
+  h2 {
+    @include underline;
+  }
+}
+
+#intro {
+  .row {
+    width: 100%;
+    height: 250px;
+  }
+  .col {
+    flex: 31%;
+    max-width: 31%;
+    background: rgb(105, 91, 27);
+  }
+}
+#newsletter {
+  .row {
+    width: 100%;
+    height: 250px;
+  }
+  .col {
+    &:first-child {
+      align-self: center;
+      flex: 30%;
+      max-width: 30%;
+      img {
+        width: 100%;
+        user-select: none;
+      }
+    }
+    &:last-child {
+      flex: 65%;
+      max-width: 65%;
+    }
+  }
+}

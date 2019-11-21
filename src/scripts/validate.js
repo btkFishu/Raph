@@ -1,5 +1,3 @@
-let getMail;
-
 // email validation
 function validateEmail(email) {
   // RFC 2822 email standard
@@ -7,7 +5,7 @@ function validateEmail(email) {
   return reg.test(email);
 }
 
-function validate() {
+export function validate() {
   // prevent default button behaviour
   event.preventDefault();
 
@@ -21,11 +19,10 @@ function validate() {
     btn.innerHTML = 'Done!';
     btn.disabled = true;
     btn.style.cursor = 'default';
-    emailInput.style.padding = '8px 38px'
+    emailInput.style.padding = '8px 18px'
     emailInput.style.border = '2px solid rgb(89, 206, 53)';
-    getMail = email;
   } else {
-    emailInput.style.padding = '8px 38px'
+    emailInput.style.padding = '8px 18px'
     emailInput.style.border = '2px solid #F00';
     btn.innerHTML = 'Try again';
   }

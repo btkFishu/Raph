@@ -1,0 +1,33 @@
+{
+  "name": "pro-flutter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pro Flutter website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btkFishu/Pro-Flutter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/btkFishu/Pro-Flutter/issues"
+  },
+  "homepage": "https://github.com/btkFishu/Pro-Flutter#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "parcel-bundler": "^1.12.4",
+    "postcss-custom-properties": "^9.0.2",
+    "sass": "^1.23.7"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

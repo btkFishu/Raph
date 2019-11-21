@@ -1,0 +1,45 @@
+nav {
+  height: 56px;
+}
+#logo {
+  float: left;
+  height: 52px;
+  padding-top: 10px;
+  h1 {
+    position: absolute;
+    left: -10000px;
+    user-select: none;
+  }
+  img {
+    height: 100%;
+    user-select: none;
+  }
+}
+#links {
+  float: right;
+  padding-top: 14px;
+  ul {
+    width: 100%;
+    @include clearFix;
+  }
+  li {
+    float: left;
+    margin-left: 37px;
+    i {
+      font-size: $navMediaIconSize;
+      transition: color .1s linear;
+    }
+    &:first-child i {
+      color: $ytColor;
+      &:hover {
+        color: darken($ytColor, 13%);
+      }
+    }
+    &:last-child i {
+      color: $ghColor;
+      &:hover {
+        color: darken($ghColor, 13%);
+      }
+    }
+  }
+}

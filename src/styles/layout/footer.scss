@@ -1,0 +1,11 @@
+footer {
+  margin-top: 70px;
+  min-height: 40px;
+  background: $footerBgColor;
+  text-align: center;
+  p {
+    padding: 9px 0;
+    color: $footerTextColor;
+    font-size: $footerTextSize;
+  }
+}

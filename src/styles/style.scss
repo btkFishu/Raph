@@ -1,0 +1,8 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+
+@import './layout/navigation.scss';
+@import './layout/header.scss';
+@import './layout/main.scss';
+@import './layout/footer.scss';
