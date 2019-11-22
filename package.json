@@ -25,7 +25,8 @@
     "sass": "^1.23.7"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.7.0"
+    "@babel/polyfill": "^7.7.0",
+    "@glidejs/glide": "^3.4.1"
   },
   "browserslist": [
     "defaults"
