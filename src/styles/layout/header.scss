@@ -1,5 +1,5 @@
 header {
-  height: 450px;
+  height: calc(100vh - 56px);
   width: 100%;
   .glide, .glide__track, .glide__slides {
     height: 100%;
