@@ -1,7 +1,10 @@
+@mixin pseudoElement {
+  content: '';
+  display: block;
+}
 @mixin clearFix {
   &:after {
-    content: '';
-    display: block;
+    @include pseudoElement;
     clear: both;
   }
 }

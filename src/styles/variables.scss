@@ -2,14 +2,16 @@
 $fontMain: 'Lato', sans-serif;
 $textSize: 19px;
 $headingTextSize: 32px;
-$footerTextSize: 14px;
+$footerTextSize: 0.74rem;
 $navMediaIconSize: 26px;
+$sliderTextSize: 4.6rem;
 
 // colors
 $textMainColor: rgb(31, 30, 37);
-$headerBgColor: rgba(255, 255, 255, 0.705);
+$headerBgColor: rgba(255, 255, 255, 0.5);
 $footerTextColor: rgba(255, 255, 255, 0.335);
 $footerBgColor: rgb(12, 9, 12);
+$sliderTextColor: rgb(45, 72, 223);
 
 $signUpTextColor: white;
 $emailInputColor: rgba(138, 136, 136, 0.37);
