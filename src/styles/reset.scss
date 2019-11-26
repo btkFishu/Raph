@@ -11,7 +11,7 @@ a {
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: $fontMain;
+  font-family: $Lato;
   color: $textMainColor;
   font-size: 19px;
 }
@@ -21,7 +21,6 @@ a {
   width: 96%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2%;
   text-align: center;
 }
 .text-wrap {

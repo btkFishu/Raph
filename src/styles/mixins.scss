@@ -10,12 +10,11 @@
 }
 @mixin underline {
   &:after {
-    display: block;
-    content: '';
-    width: 86px;
+    @include pseudoElement;
+    width: 6rem;
     height: 1px;
-    border-bottom: 4px solid darken($signUpBtnColor, 13%);
-    border-radius: 55px;
+    border-bottom: 5px solid darken($lightBlue, 13%);
+    border-radius: 90%;
     margin: 40px auto;
   }
 }

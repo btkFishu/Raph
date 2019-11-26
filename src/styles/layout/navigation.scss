@@ -1,5 +1,9 @@
 nav {
   height: 56px;
+  width: 100%;
+  background: transparent;
+  z-index: 5;
+  position: absolute;
 }
 #logo {
   float: left;
