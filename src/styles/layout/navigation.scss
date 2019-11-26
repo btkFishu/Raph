@@ -3,7 +3,7 @@ nav {
   width: 100%;
   background: transparent;
   z-index: 5;
-  position: absolute;
+  position: fixed;
 }
 #logo {
   float: left;
@@ -34,15 +34,15 @@ nav {
       transition: color .1s linear;
     }
     &:first-child i {
-      color: $ytColor;
+      color: white;
       &:hover {
-        color: darken($ytColor, 13%);
+        color: darken(white, 13%);
       }
     }
     &:last-child i {
-      color: $ghColor;
+      color: white;
       &:hover {
-        color: darken($ghColor, 13%);
+        color: darken(white, 13%);
       }
     }
   }
