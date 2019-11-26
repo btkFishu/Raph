@@ -27,23 +27,24 @@ nav {
     @include clearFix;
   }
   li {
+    font-family: $Roboto;
     float: left;
     margin-left: 37px;
+    a {
+      color: white;
+    }
     i {
+      color: white;
       font-size: $navMediaIconSize;
       transition: color .1s linear;
     }
-    &:first-child i {
-      color: white;
-      &:hover {
-        color: darken(white, 13%);
-      }
+    &:nth-child(-n+3) a:hover {
+      color: darken(white, 15%);
+      padding-bottom: 6px;
+      border-bottom: 3px solid darken(white, 15%);
     }
-    &:last-child i {
-      color: white;
-      &:hover {
-        color: darken(white, 13%);
-      }
+    &:hover a, &:hover i {
+      color: darken(white, 15%);
     }
   }
 }
