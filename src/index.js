@@ -2,6 +2,7 @@ import "@babel/polyfill"
 import './styles/style.scss'
 import Glide from '@glidejs/glide'
 
+import { scroll } from './scripts/navbar'
 import { validate } from './scripts/validate'
 
 new Glide('.glide', {
@@ -15,4 +16,5 @@ new Glide('.glide', {
   animationTimingFunc: 'ease-out'
 }).mount();
 
+window.onscroll = scroll;
 window.validate = validate;
