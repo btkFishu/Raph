@@ -2,6 +2,7 @@ header {
   height: 100vh;
   max-height: 800px;
   width: 100%;
+  // slider elements
   .glide, .glide__track, .glide__slides {
     height: 100%;
     width: 100%;
@@ -16,7 +17,7 @@ header {
     width: 18px;
     background: transparent;
     margin-left: 3px;
-    border: 2px solid lighten($lightBlue, 44%);
+    border: 2px solid $navTextColor;
     cursor: pointer;
   }
   .glide__bullet--active {
@@ -39,11 +40,14 @@ header {
   height: 100%;
   background-size: cover;
  }
+// overlay gradient
 .gradient {
   width: 100%;
   height: 100%;
   background: radial-gradient(ellipse, rgba(126, 201, 219, 0.4), rgba(203, 149, 240, 0.3));
 }
+
+// header text content container
 .box {
   @include flex;
   align-content: center;
@@ -55,15 +59,15 @@ header {
     }
     max-width: 800px;
     text-transform: uppercase;
-    color: white;
+    color: $navTextColor;
     @include underline;
     &:after {
-      border-color: white;
+      border-color: $navTextColor;
       margin: 3rem auto;
     }
   }
   a {
-    border: 3px solid white;
+    border: 3px solid $navTextColor;
     padding: 0.25rem 1.3rem;
     box-shadow: 0 0 4px 1px white;
     transition: border .15s linear,
@@ -76,13 +80,13 @@ header {
         weight: bold;
       }
       text-transform: uppercase;
-      color: white;
+      color: $navTextColor;
       transition: color .15s linear;
     }
     &:hover {
       border-color: $lightBlue;
-      background: white;
-      box-shadow: 0 0 4px 1px darken(white, 71%);
+      background: $navTextColor;
+      box-shadow: 0 0 4px 1px darken($navTextColor, 71%);
       div {
         color: $lightBlue;
       }
