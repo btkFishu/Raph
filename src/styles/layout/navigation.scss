@@ -6,46 +6,72 @@ nav {
   position: fixed;
   transition: background .3s linear;
 }
+
+// logo
 #logo {
   float: left;
   height: 56px;
   padding: 16px 0;
+
   h1 {
     position: absolute;
     left: -10000px;
     user-select: none;
   }
+
   img {
     height: 100%;
     user-select: none;
   }
-}
-#links {
-  float: right;
-  padding-top: 14px;
-  ul {
-    width: 100%;
-    @include clearFix;
+
+  @media only screen and (min-width: $xsBP) {
+    float: none;
+    display: inline-block;
   }
-  li {
-    font-family: $Roboto;
+
+  @media only screen and (min-width: $lBP) {
     float: left;
-    margin-left: 37px;
-    a {
-      color: $navTextColor;
+  }
+}
+
+// navigation links
+#links {
+  display: none;
+  
+  @media only screen and (min-width: $lBP) {
+    display: block;
+    float: right;
+    padding-top: 14px;
+
+    ul {
+      width: 100%;
+      @include clearFix;
     }
-    i {
-      color: $navTextColor;
-      font-size: $navMediaIconSize;
-      transition: color .1s linear;
-    }
-    &:nth-child(-n+3) a:hover {
-      color: darken($navTextColor, 15%);
-      padding-bottom: 6px;
-      border-bottom: 3px solid darken($navTextColor, 15%);
-    }
-    &:hover i {
-      color: darken($navTextColor, 15%);
+
+    li {
+      font-family: $Roboto;
+      float: left;
+      margin-left: 37px;
+
+      a {
+        color: $navTextColor;
+      }
+
+      i {
+        color: $navTextColor;
+        font-size: $navMediaIconSize;
+        transition: color .1s linear;
+      }
+
+      &:nth-child(-n+3) a:hover {
+        color: darken($navTextColor, 15%);
+        padding-bottom: 6px;
+        border-bottom: 3px solid darken($navTextColor, 15%);
+      }
+
+      &:hover i {
+        color: darken($navTextColor, 15%);
+      }
     }
   }
 }
@@ -59,26 +85,30 @@ nav {
   border: none;
   background: transparent;
   cursor: pointer;
-  display: none;
+
   &:focus {
     .hamburger-container {
       box-shadow: 0 0 1px 1px #51a7e8;
       outline: none;
+
       &:focus {
         outline: none;
       }
     }
   }
+
   .hamburger-container {
     @include flex;
     position: relative;
     height: 24px;
     width: 40px;
   }
+
   .hamburger-bars {
     @include hamburgerBar;
     top: 10px;
     transition: transform .2s ease-in-out;
+
     &:before {
       @include pseudoElement;
       @include hamburgerBar;
@@ -86,6 +116,7 @@ nav {
       transition: top .1s ease-out .2s,
                 transform .2s ease-in-out;
     }
+
     &:after {
       @include pseudoElement;
       @include hamburgerBar;
@@ -93,23 +124,31 @@ nav {
       transition: bottom .1s ease-out .2s;
     }
   }
+  
   &.active {
     .hamburger-bars {
       transform: rotate(45deg);
       transition: transform .2s ease-in-out .1s;
+
       &:before {
         top: 0;
         transform: rotate(-90deg);
         transition: top .1s ease-in,
                     transform .2s ease-in-out .1s;          
       }
+
       &:after {
         bottom: 0;
         transition: bottom .1s ease-in;
       }
     }
   }
+  
+  @media only screen and (min-width: $lBP) {
+    display: none;
+  }
 }
+
 // hamburger menu
 #hamburger-menu {
   width: 100%;
@@ -122,83 +161,78 @@ nav {
               visibility linear .3s;
   overflow: hidden;
   text-align: center;
+
   ul {
     width: 100%;
     height: 100%;
     @include flex;
     align-items: center;
   }
+
   li {
-    margin: 0 1.5rem;
+    margin: 0;
+
+    @media only screen and (min-width: $sBP) {
+      margin: 0 1.5rem;
+    }
+
     &:first-child {
-      margin-left: 0;
+      margin-top: .5rem;
+
+      @media only screen and (min-width: $sBP) {
+        margin-top: 0;
+        margin-left: 0;
+      }
     }
+
     &:last-child {
-      margin-right: 0;
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
+
+      @media only screen and (min-width: $sBP) {
+        margin-bottom: 0;
+        margin-right: 0;
+      }
     }
+
+    &:nth-child(7) {
+      margin-bottom: 0.5rem;
+
+      @media only screen and (min-width: $sBP) {
+        margin-bottom: 0;
+      }
+    }
+
+    &.break {
+      display: list-item;
+
+      @media only screen and (min-width: $sBP) {
+        display: none;
+      }
+    }
+
     a {
       color: $navTextColor;
       font-family: $Roboto;
     }
+
     i {
       vertical-align: middle;
       color: $navTextColor;
       font-size: $navMediaIconSize;
     }
-    &.break {
-      display: none;
-    }
   }
-  &.active {
-    height: 0;
-  }
-}
 
-@media screen and (max-width: 1024px) {
-  #hamburger {
-    display: inline-block;
-  }
-  #links {
-    display: none;
-  }
-  #hamburger-menu {
-    &.active {
-      visibility: visible;
+  &.active {
+    height: 320%;
+    visibility: visible;
+
+    @media only screen and(min-width: $sBP) {
       height: 100%;
     }
-  }
-}
-@media screen and (max-width: 768px) {
-  #logo {
-    float: none;
-    display: inline-block;
-  }
-}
-@media screen and (max-width: 520px) {
-  #hamburger-menu {
-    &.active {
-      height: 320%;
+
+    @media only screen and(min-width: $lBP) {
+      visibility: hidden;
     }
-    li {
-      margin: 0;
-      &:first-child {
-        margin-top: .5rem;
-      }
-      &:last-child {
-        margin-left: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-      &:nth-child(7) {
-        margin-bottom: 0.5rem;
-      }
-      &.break {
-        display: list-item;
-      }      
-    }
-  }
-}
-@media screen and (max-width: 440px) {
-  #logo {
-    float: left;
   }
 }

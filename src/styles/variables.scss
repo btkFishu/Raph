@@ -17,12 +17,19 @@ $emailInputColor: rgba(138, 136, 136, 0.37);
 
 $lightBlue: rgb(31, 136, 185);
 
+// breakpoints
+$xsBP: 440px;
+$sBP: 520px;
+$smBP: 650px;
+$mBP: 768px;
+$lBP: 1024px;
+
 :root {
   --section-margin: 120px;
   --slider-text-size: 3.9rem;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: $smBP) {
   :root {
     --slider-text-size: 2.9rem;
   }
