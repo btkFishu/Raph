@@ -92,11 +92,9 @@ header {
 
     // hover effect for large screens
     @media only screen and (min-width: $lBP) {
-      a {
-        transition: border .15s linear,
-                    box-shadow .25s linear,
-                    background .15s linear;
-      }
+      transition: border .15s linear,
+                  box-shadow .25s linear,
+                  background .15s linear;
 
       div {
         transition: color .15s linear;
