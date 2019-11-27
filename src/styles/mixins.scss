@@ -8,6 +8,10 @@
     clear: both;
   }
 }
+@mixin fill {
+  height: 100%;
+  width: 100%;
+}
 @mixin underline {
   &:after {
     @include pseudoElement;

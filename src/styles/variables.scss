@@ -26,16 +26,13 @@ $lBP: 1024px;
 
 :root {
   --section-margin: 120px;
-  --slider-text-size: 3.9rem;
-}
+  --slider-text-size: 2.4rem;
 
-@media screen and (max-width: $smBP) {
-  :root {
+  @media only screen and (min-width: $xsBP) {
     --slider-text-size: 2.9rem;
   }
-}
-@media screen and (max-width: 370px) {
-  :root {
-    --slider-text-size: 2.4rem;
+
+  @media only screen and (min-width: $mBP) {
+    --slider-text-size: 3.9rem;
   }
 }
