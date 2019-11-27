@@ -1,6 +1,7 @@
 header {
   height: 100vh;
   max-height: 800px;
+  min-height: 500px;
   width: 100%;
   // slider elements
   .glide, .glide__track, .glide__slides {
@@ -54,7 +55,7 @@ header {
   p {
     font: {
       family: $Roboto;
-      size: $sliderTextSize;
+      size: var(--slider-text-size);
       weight: bold;
     }
     max-width: 800px;
@@ -76,7 +77,7 @@ header {
     div {
       font: {
         family: $Roboto;
-        size: calc(#{$sliderTextSize} / 3.5);
+        size: calc(var(--slider-text-size) / 3.5);
         weight: bold;
       }
       text-transform: uppercase;
@@ -92,4 +93,4 @@ header {
       }
     }
   }
- }
+}

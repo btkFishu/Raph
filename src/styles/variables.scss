@@ -5,7 +5,6 @@ $textSize: 19px;
 $headingTextSize: 32px;
 $footerTextSize: 0.74rem;
 $navMediaIconSize: 26px;
-$sliderTextSize: 3.9rem;
 
 // colors
 $textMainColor: rgb(31, 30, 37);
@@ -20,4 +19,16 @@ $lightBlue: rgb(31, 136, 185);
 
 :root {
   --section-margin: 120px;
+  --slider-text-size: 3.9rem;
+}
+
+@media screen and (max-width: 650px) {
+  :root {
+    --slider-text-size: 2.9rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  :root {
+    --slider-text-size: 2.4rem;
+  }
 }
