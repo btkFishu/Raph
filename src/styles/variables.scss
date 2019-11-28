@@ -2,7 +2,7 @@
 $Lato: 'Lato', sans-serif;
 $Roboto: 'Roboto', sans-serif;
 $textSize: 19px;
-$headingTextSize: 32px;
+$sectionTitleSize: 1.7rem;
 $footerTextSize: 0.74rem;
 $navMediaIconSize: 26px;
 
@@ -11,9 +11,6 @@ $textMainColor: rgb(31, 30, 37);
 $navTextColor: white;
 $footerTextColor: rgba(255, 255, 255, 0.335);
 $footerBgColor: rgb(12, 9, 12);
-
-$signUpTextColor: white;
-$emailInputColor: rgba(138, 136, 136, 0.37);
 
 $lightBlue: rgb(31, 136, 185);
 
@@ -25,7 +22,7 @@ $mBP: 768px;
 $lBP: 1024px;
 
 :root {
-  --section-margin: 120px;
+  --section-spacing: 90px;
   --slider-text-size: 2.4rem;
 
   @media only screen and (min-width: $xsBP) {
@@ -34,5 +31,6 @@ $lBP: 1024px;
 
   @media only screen and (min-width: $mBP) {
     --slider-text-size: 3.9rem;
+    --section-spacing: 120px;
   }
 }

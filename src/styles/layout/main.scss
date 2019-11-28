@@ -1,6 +1,41 @@
+#about {
+  padding-top: var(--section-spacing);
+  h2 {
+    font-size: $sectionTitleSize;
+    @include underline;
+  }
+  text-align: center;
+  .col {
+    margin-top: 3em;
+    img {
+      width: 100%;
+      max-width: 330px;
+      @media only screen and (min-width: $mBP) {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+    p {
+      margin-top: 1em;
+      @media only screen and (min-width: $mBP) {
+        margin-top: 1.5em;
+      }
+    }
+    h3 {
+      @extend p;
+      font-size: 1.1em;
+    }
+    @media only screen and (min-width: $mBP) {
+      max-width: 31%;
+      margin-top: 4em;
+    }
+  }
+}
+
+
 #intro,
 #newsletter {
-  margin-top: var(--section-margin);
+  margin-top: var(--section-spacing);
   h2 {
     @include underline;
   }

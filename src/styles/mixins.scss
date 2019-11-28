@@ -17,7 +17,7 @@
     @include pseudoElement;
     width: 6rem;
     height: 1px;
-    border-bottom: 5px solid darken($lightBlue, 13%);
+    border-bottom: 5px solid $lightBlue;
     border-radius: 90%;
     margin: 40px auto;
   }
