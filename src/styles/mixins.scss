@@ -2,16 +2,19 @@
   content: '';
   display: block;
 }
+
 @mixin clearFix {
   &:after {
     @include pseudoElement;
     clear: both;
   }
 }
+
 @mixin fill {
   height: 100%;
   width: 100%;
 }
+
 @mixin underline {
   &:after {
     @include pseudoElement;
@@ -22,11 +25,21 @@
     margin: 40px auto;
   }
 }
+
+@mixin sectionStyles {
+  padding-top: var(--section-spacing);
+  h2 {
+    font-size: $sectionTitleSize;
+    @include underline;
+  }
+}
+
 @mixin flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 @mixin hamburgerBar {
   position: absolute;
   height: 4px;
