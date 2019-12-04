@@ -1,4 +1,5 @@
 // NAVBAR
+// modify navbar background color when page is offset
 const nav = document.getElementsByTagName('nav');
 export function scroll() {
   if(window.pageYOffset > 50) {
@@ -8,6 +9,20 @@ export function scroll() {
     nav[0].style.background = 'rgba(0, 0, 0, 0.1)';
   }
 }
+
+// prevent adding id's by navigation anchor tags
+const anchors = document.getElementsByClassName('move-to');
+for(const el of anchors) {
+  el.addEventListener('click', () => {
+    event.preventDefault();
+    const index = el.href.lastIndexOf('#');
+    if(index != -1) {
+      const id = el.href.slice(index+1);
+      document.getElementById(id).scrollIntoView(true);
+    }
+  })
+}
+
 
 // HAMBURGER
 // toggle hamburger menu
