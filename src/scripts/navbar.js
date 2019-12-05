@@ -1,14 +1,14 @@
 // NAVBAR
 // modify navbar background color when page is offset
 const nav = document.getElementsByTagName('nav');
-export function scroll() {
+document.addEventListener('scroll', () => {
   if(window.pageYOffset > 50) {
     nav[0].style.background = 'rgba(0, 0, 0, 0.44)';
   }
   else {
     nav[0].style.background = 'rgba(0, 0, 0, 0.1)';
-  }
-}
+  }  
+});
 
 // prevent adding id's by navigation anchor tags
 const anchors = document.getElementsByClassName('move-to');
@@ -26,7 +26,7 @@ for(const el of anchors) {
 
 // HAMBURGER
 // toggle hamburger menu
-export function hamburger() {
+window.hamburger = function hamburger() {
   const menu = document.getElementById('hamburger-menu');
   const hb = document.getElementById('hamburger');
   hb.classList.toggle('active');

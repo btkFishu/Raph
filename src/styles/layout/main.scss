@@ -35,22 +35,6 @@
   }
 }
 
-// intro section
-#intro {
-  @include sectionStyles;
-
-  .row {
-    width: 100%;
-    height: 250px;
-  }
-
-  .col {
-    flex: 31%;
-    max-width: 31%;
-    background: rgb(105, 91, 27);
-  }
-}
-
 // newsletter section
 #newsletter {
   @include sectionStyles;
@@ -93,7 +77,8 @@
   width: 90%;
   max-width: 330px;
   padding: .45em 1em;
-  border: 2px solid $textMainColor;
+  border: 2px solid lighten($textMainColor, 20%);
+  transition: border .2s linear;
 }
 
 #email-input {
@@ -103,9 +88,10 @@
 
 #sign-up {
   width: 70%;
+  height: 44px;
+  max-height: 44px;
   max-width: 200px;
   padding: .5em 1em;
-  color: white;
   background: $lightBlue;
   border: none;
 
@@ -117,5 +103,25 @@
         background: darken($lightBlue, 15%);
       }
     }
+  }
+
+  .btn-text {
+    color: white;
+  }
+
+  .loading {
+    display: none;
+    margin: 0 auto;
+    height: 25px;
+    width: 25px;
+    border: 3px solid rgba(255, 255, 255, 0.198);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
 }
