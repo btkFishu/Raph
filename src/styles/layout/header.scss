@@ -78,7 +78,7 @@ header {
   a {
     border: 3px solid $navTextColor;
     padding: 0.25rem 1.3rem;
-    box-shadow: 0 0 4px 1px white;
+    box-shadow: 0 0 4px 1px fade-out(darken($navTextColor, 27%), 0.6);
 
     div {
       font: {
@@ -93,7 +93,7 @@ header {
     // hover effect for large screens
     @media only screen and (min-width: $lBP) {
       transition: border .15s linear,
-                  box-shadow .25s linear,
+                  box-shadow .15s linear,
                   background .15s linear;
 
       div {

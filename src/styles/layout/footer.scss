@@ -1,11 +1,40 @@
 footer {
-  margin-top: 70px;
-  min-height: 40px;
+  margin-top: 3.5rem;
   background: $footerBgColor;
   text-align: center;
+
   p {
-    padding: 9px 0;
-    color: $footerTextColor;
-    font-size: $footerTextSize;
+    padding-bottom: 0.74rem;
+    color: $copyrightColor;
+    font-size: $copyrightSize;
+  }
+
+  .contact-icons {
+    @include flex;
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    &>a {
+      margin-left: 1.5rem;
+    }
+    i {
+      font-size: $footerIconsSize;
+      color: $footerIconsColor;
+      
+      &:hover {
+        @media only screen and (min-width: $lBP) {
+          color: darken($footerIconsColor, 25%);
+        }
+      }
+    }
+  }
+}
+
+#footer-logo {
+  padding-top: 1.5rem;
+  height: 5rem;
+
+  img {
+    height: 100%;
   }
 }

@@ -22,8 +22,8 @@
             <li><a class="move-to" href="#about">About</a></li>
             <li><a class="move-to" href="#courses">Courses</a></li>
             <li><a class="move-to" href="#contact">Contact</a></li>
-            <li><a title="YouTube" href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
-            <li><a title="GitHub" href="" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a title="YouTube" href="" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+            <li><a title="GitHub" href="" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
           </ul>
         </div>
         <button id="hamburger" aria-label="Menu" onclick="hamburger()">
@@ -88,8 +88,8 @@
     <main>
       <section id="about" class="wrapper">
         <div class="text-wrap">
-          <h2>Natus mollitia facere</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sequi aut deleniti tempore. Unde vitae aliquid voluptatum dolorum dolore, voluptas provident molestias delectus perferendis odit saepe cum consectetur! Exercitationem, dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint doloremque maiores, laudantium tempore ullam voluptatum voluptates, labore tenetur blanditiis repellendus quidem atque ex modi. Fugiat obcaecati quaerat vero odit cum.</p>
+          <h2>About Pro Flutter</h2>
+          <p>Flutter is UI toolkit for Android, iOS, Desktop and Web which lets you create application for mulitple platforms from one codebase. Together we can become pro flutter developer and take your flutter applications on a whole nother level.</p>
         </div>
         <div class="row">
           <div class="col">
@@ -133,8 +133,20 @@
         </div>
       </section>
     </main>
-    <footer>
-      <p>&copy; 2019 Pawel Kaczoruk - All rights reserved</p>
+    <footer id="contact">
+      <div id="footer-logo">
+        <img src="./images/footerLogo.png" alt="Pro Flutter logo">
+      </div>
+      <div class="contact-icons">
+        <div class="tooltip">
+          <i class="far fa-envelope" onclick="copy('rafbednarczuk@gmail.com')" onmouseout="outCopy()"></i>
+          <span class="tooltiptext" id="mailTooltip">Copy to clipoboard</span>
+        </div>
+        <a title="Instagram" href="" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+        <a title="YouTube" href="" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+        <a title="GitHub" href="" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+      </div>
+      <p>&copy; 2019 Pro Flutter - All rights reserved</p>
     </footer>
 
     <script src="./index.js"></script>
