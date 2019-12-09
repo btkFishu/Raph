@@ -1,6 +1,6 @@
 import '@babel/polyfill'
+import './scripts/updatePage'
 import './styles/style.scss'
-import './scripts/fb'
 import './scripts/navbar'
 import './scripts/slider'
 import './scripts/validate'
