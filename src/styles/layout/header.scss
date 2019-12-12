@@ -31,15 +31,42 @@ header {
 
 // slide images
 .slide-newsletter {
-  background: url('../images/header1.jpg') no-repeat center center;
+  background: url('../images/header/header1-s.jpg') no-repeat center center;
 }
-
 .slide-courses {
-  background: url('../images/header2.jpg') no-repeat center center;
+  background: url('../images/header/header2-s.jpg') no-repeat center center;
 }
 
 .slide-contact {
-  background: url('../images/header3.jpg') no-repeat center center;
+  background: url('../images/header/header3-s.jpg') no-repeat center center;
+}
+
+@media only screen and (min-width: $mBP) and (max-width: 1199px) {
+  .slide-newsletter {
+    background: url('../images/header/header1-m.jpg') no-repeat center center;
+  }
+
+  .slide-courses {
+    background: url('../images/header/header2-m.jpg') no-repeat center center;
+  }
+  
+  .slide-contact {
+    background: url('../images/header/header3-m.jpg') no-repeat center center;
+  }
+}
+
+@media only screen and (min-width: $xlBP) {
+  .slide-newsletter {
+    background: url('../images/header/header1-l.jpg') no-repeat center center;
+  }
+
+  .slide-courses {
+    background: url('../images/header/header2-l.jpg') no-repeat center center;
+  }
+  
+  .slide-contact {
+    background: url('../images/header/header3-l.jpg') no-repeat center center;
+  }
 }
 
 .slide-newsletter, .slide-courses, .slide-contact {
