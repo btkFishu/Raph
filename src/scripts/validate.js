@@ -27,7 +27,8 @@ window.validate = function validate() {
   if(validateEmail(contactInfo.email)) {
     isEmailValid = true;
     emailInput.style.border = '2px solid rgb(89, 206, 53)';
-  } else {
+  } 
+  else {
     isEmailValid = false;
     emailInput.style.border = '2px solid #F00';
     btnContent[1].innerHTML = 'Try again';
@@ -37,7 +38,8 @@ window.validate = function validate() {
   if(contactInfo.name != '') {
     isNameValid = true;
     nameInput.style.border = '2px solid rgb(89, 206, 53)';
-  } else {
+  } 
+  else {
     isNameValid = false;
     nameInput.style.border = '2px solid #F00';
     btnContent[1].innerHTML = 'Try again';
