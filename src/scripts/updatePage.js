@@ -1,11 +1,4 @@
-import { remoteConfig } from './fb'
-
-remoteConfig.settings = {
-  minimumFetchIntervalMillis: 3600000,
-};
-
-// set default values
-remoteConfig.defaultConfig = ({
+const defaultConfig = {
   'about_title': 'About Pro Flutter',
   'about_text': 'Flutter is UI toolkit for Android, iOS, Desktop and Web which lets you create application for mulitple platforms from one codebase. Together we can become pro flutter developer and take your flutter applications on a whole nother level.',
   'about_first_card_title': 'about_first_card_title',
@@ -24,30 +17,26 @@ remoteConfig.defaultConfig = ({
   'courses_third_vid': 'pFUEjJvgtUc',
   'newsletter_title': 'Sign up for Newsletter',
   'newsletter_text': 'Join our squad and be notified about all news. Master your skills with us.',
-});
+}
 
 // get and update content
-remoteConfig.fetch().then(() => {
-  for(const key of Object.keys(remoteConfig.defaultConfig)) {
-    const el = document.getElementById(key),
-          val = remoteConfig.getValue(key)._value;
+Object.keys(defaultConfig).forEach((key) => {
+  const el = document.getElementById(key),
+        val = defaultConfig[key];
 
-    if(key.includes('_vid')) {
-      // update tutorial video src
-      const src = `https://www.youtube.com/embed/${ val }`;
-      el.src = src;
-    } 
-    else if(key.includes('_file')) {
-      // update src for about section video
-      const en = encodeURIComponent(val),
-            src = `https://firebasestorage.googleapis.com/v0/b/proflutter-e3263.appspot.com/o/${ en }.mp4?alt=media`;
-      el.src = src;
-    } 
-    else {
-      // update text content
-      el.innerText = val;
-    }
+  if(key.includes('_vid')) {
+    // update tutorial video src
+    const src = `https://www.youtube.com/embed/${ val }`;
+    el.src = src;
+  } 
+  else if(key.includes('_file')) {
+    // update src for about section video
+    const en = encodeURIComponent(val),
+          src = `https://firebasestorage.googleapis.com/v0/b/proflutter-e3263.appspot.com/o/${ en }.mp4?alt=media`;
+    el.src = src;
+  } 
+  else {
+    // update text content
+    el.innerText = val;
   }
 });
-
-

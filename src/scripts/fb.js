@@ -1,6 +1,5 @@
 import * as firebase from 'firebase/app'
 import 'firebase/firestore'
-import 'firebase/remote-config'
 
 // firebase config
 const firebaseConfig = {
@@ -17,6 +16,5 @@ const firebaseConfig = {
 // initialize firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-const remoteConfig = firebase.remoteConfig();
 
-export { db, remoteConfig };
+export { db };
