@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '12.6.0'
+script:
+- npm run prod
+deploy:
+  provider: firebase
+  token:
+    secure: H57VqhLacmFIfAcukaA61HRdEubp+ZHpEh5plGT3ypGqG7+QQ1aiEWNITUR4hwVsbRzMkqSsNhKAhjw3izfgCL9y+6MJHcsGruQUm56O8qCKaQR5IoaLlB2mohXoV0LYE/MdjzS7NTw5wD11fOQQOyiladKS3o+t7VK3xrm896Q7lgLqLa7TXuGH0CE9wbMwR0HiRde6o0yBYDB1b6dlzpsoB4MK/2Vjm/vw8MAfj2ovhgYvFqf0tJCYeF8hEQ6n5HB0r1p7R7g6ED7E9r4dnsm9BzfdlFqGqFVRaU2Y7ib+wNPce42d31hj/S45+iFZ+tCBFHcL7x4Yb9wPshaerp1lX8USUTKFyx1nlqNZOmkj8O7Fz9Q8C/go6q9maGvujNXwKnMcI7wo6+rc2NuCQt3W4RLtpIrgvrc+39iOfwwIsI1EPQ2oi74JqRf9YO81CG1314iy7tLeC6LsGsdRvU/NcWDvxRIYJ8l69anYtU/PDVeXwleoXhM4J6pVIX8oh2tMmvvcObuDPeStj+2iafgt+MiRRtnANa23R+2ok8y+zLc4LPCWNWPr4GbeHtnfLfqAp2VtontlKsARCPtvPCIqgmf71qzLy182/QHl+USboVpUT3W1siKxHjngdO3ug+0kScVKmW8p66To3h+Bi4oesf7ictPbSQfNAgAp/VI=
+message: "Automatic deployment by travis - CI"

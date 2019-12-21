@@ -1,7 +1,7 @@
 import { remoteConfig } from './fb'
 
 remoteConfig.settings = {
-  minimumFetchIntervalMillis: 3600,
+  minimumFetchIntervalMillis: 3600000,
 };
 
 // set default values
@@ -27,7 +27,7 @@ remoteConfig.defaultConfig = ({
 });
 
 // get and update content
-remoteConfig.fetchAndActivate().then(() => {
+remoteConfig.fetch().then(() => {
   for(const key of Object.keys(remoteConfig.defaultConfig)) {
     const el = document.getElementById(key),
           val = remoteConfig.getValue(key)._value;
