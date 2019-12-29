@@ -103,14 +103,16 @@ header {
   }
 
   a {
+    width: 70%;
+    max-width: 200px;
     border: 3px solid $navTextColor;
-    padding: 0.25rem 1.3rem;
+    padding: .5em 1em;
     box-shadow: 0 0 4px 1px fade-out(darken($navTextColor, 27%), 0.6);
 
     div {
       font: {
         family: $Roboto;
-        size: calc(var(--slider-text-size) / 3.5);
+        
         weight: bold;
       }
       text-transform: uppercase;

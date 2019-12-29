@@ -3,16 +3,64 @@
   @include sectionStyles;
 
   .col {
-    margin-top: 3em;
+    margin-top: 1.5em;
     width: 100%;
 
+    &:first-child {
+      margin-top: 3em;
+
+      @media only screen and (min-width: $xlBP) {
+        margin-top: 4em;
+      }
+    }
+
+    @media only screen and (min-width: $xlBP) {
+      max-width: 31%;
+      margin-top: 4em;
+    }
+
     video {
-      width: 100%;
-      max-width: 300px;
+      width: 255px;
+      margin-top: 33px;
+      padding-right: 4px;
+
+      @media only screen and (min-width: $xsBP) {
+        width: 310px;
+        margin-top: 38px;
+        padding-right: 10px;
+      }
+    }
+
+    .frame {
+      width: 284px;
+      height: 506px;
+      margin: 0 auto;
+      position: relative;
+
+      @media only screen and (min-width: $xsBP) {
+        width: 338px;
+        height: 600px;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        background: url('../images/phoneFrame.png') no-repeat top left transparent;
+        background-size: 284px 506px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; 
+
+        @media only screen and (min-width: $xsBP) {
+          background-size: 338px 600px;
+        }
+      }
     }
 
     p {
       margin-top: 1em;
+      margin-bottom: 1.5em;
 
       @media only screen and (min-width: $mBP) {
         margin-top: 1.5em;
@@ -23,11 +71,34 @@
       @extend p;
       font-size: 1.1em;
     }
+    
+    max-height: 1000px;
+    transition: max-height .2s linear;
+    &.active {
+      max-height: 0;
+      margin-top: 0;
 
-    @media only screen and (min-width: $mBP) {
-      max-width: 31%;
-      margin-top: 4em;
+      @media only screen and (min-width: $xlBP) {
+        max-height: 1000px;
+        margin-top: 4em;
+      }
     }
+  } // end .col
+} // end about section
+
+// show more button
+#expand {
+  width: 70%;
+  height: 44px;
+  max-width: 200px;
+  padding: .4em 1em .5em;
+  margin-top: 1.5em;
+  border: 3px solid $textMainColor;
+  background: white;
+  font-weight: bold;
+
+  @media only screen and (min-width: $xlBP) {
+    display: none;
   }
 }
 
@@ -133,7 +204,6 @@
 #sign-up {
   width: 70%;
   height: 44px;
-  max-height: 44px;
   max-width: 200px;
   padding: .5em 1em;
   background: $lightBlue;
