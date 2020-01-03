@@ -2,6 +2,10 @@
 #about {
   @include sectionStyles;
 
+  .row {
+    justify-content: space-evenly;
+  }
+
   .col {
     margin-top: 1.5em;
     width: 100%;
@@ -72,15 +76,21 @@
       font-size: 1.1em;
     }
     
+    visibility: visible;
     max-height: 1000px;
-    transition: max-height .2s linear;
+    transition: max-height .2s linear,
+                visibility 0s linear .2s;
+
     &.active {
       max-height: 0;
       margin-top: 0;
+      visibility: hidden;
+      transition: max-height .2s linear;
 
       @media only screen and (min-width: $xlBP) {
         max-height: 1000px;
         margin-top: 4em;
+        visibility: visible;
       }
     }
   } // end .col
@@ -94,8 +104,20 @@
   padding: .4em 1em .5em;
   margin-top: 1.5em;
   border: 3px solid $textMainColor;
+  box-shadow: 0 0 4px 1px fade-out(darken($navTextColor, 87%), 0.6);
   background: white;
   font-weight: bold;
+  transition: border .15s linear,
+              box-shadow .15s linear,
+              color .15s linear;
+
+  &:hover {
+    @media only screen and (min-width: $lBP) {
+      border: 3px solid $lightBlue;
+      box-shadow: 0 0 4px 1px darken($navTextColor, 61%);
+      color: $lightBlue;
+    }
+  }
 
   @media only screen and (min-width: $xlBP) {
     display: none;

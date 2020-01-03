@@ -19,11 +19,11 @@
         </div>
         <div id="links">
           <ul>
-            <li><a class="move-to" href="#about">About</a></li>
-            <li><a class="move-to" href="#courses">Courses</a></li>
+            <li class="about_nav"><a class="move-to" href="#about">About</a></li class="about_nav">
+            <li class="courses_nav"><a class="move-to" href="#courses">Courses</a></li>
             <li><a class="move-to" href="#contact">Contact</a></li>
-            <li><a title="YouTube" href="" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-            <li><a title="GitHub" href="" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+            <li><a title="YouTube" href="https://www.youtube.com/c/ProFlutter" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+            <li><a title="GitHub" href="https://github.com/rafalbednarczuk/" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
           </ul>
         </div>
         <button id="hamburger" aria-label="Menu" onclick="hamburger()">
@@ -34,14 +34,14 @@
       </div>
       <div id="hamburger-menu">
         <ul>
-          <li><a class="move-to" href="#about">About</a></li>
-          <li class="break"></li>
-          <li><a class="move-to" href="#courses">Courses</a></li>
-          <li class="break"></li>
+          <li class="about_nav"><a class="move-to" href="#about">About</a></li>
+          <li class="break about_nav"></li>
+          <li class="courses_nav"><a class="move-to" href="#courses">Courses</a></li class="about_nav">
+          <li class="break courses_nav"></li>
           <li><a class="move-to" href="#contact">Contact</a></li>
           <li class="break"></li>
-          <li><a title="YouTube" href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
-          <li><a title="GitHub" href="" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a title="YouTube" href="https://www.youtube.com/c/ProFlutter" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          <li><a title="GitHub" href="https://github.com/rafalbednarczuk/" target="_blank"><i class="fab fa-github"></i></a></li>
         </ul>
       </div>
     </nav>
@@ -92,38 +92,38 @@
           <p id="about_text"></p>
         </div>
         <div class="row">
-          <div class="col">
+          <div id="about_content_first_card_visible" class="col">
             <div class="frame">
-              <video id="about_first_card_file" 
+              <video id="about_content_first_card_file" 
               autoplay 
               playsinline 
               muted 
               loop></video>
             </div>
-            <h3 id="about_first_card_title"></h3>
-            <p id="about_first_card_text"></p>
+            <h3 id="about_content_first_card_title"></h3>
+            <p id="about_content_first_card_text"></p>
           </div>
-          <div class="col active">
+          <div id="about_content_second_card_visible" class="col active">
             <div class="frame">
-              <video id="about_second_card_file" 
+              <video id="about_content_second_card_file" 
               autoplay 
               playsinline 
               muted 
               loop></video>
             </div>
-            <h3 id="about_second_card_title"></h3>
-            <p id="about_second_card_text"></p>
+            <h3 id="about_content_second_card_title"></h3>
+            <p id="about_content_second_card_text"></p>
           </div>
-          <div class="col active">
+          <div id="about_content_third_card_visible" class="col active">
             <div class="frame">
-              <video id="about_third_card_file" 
+              <video id="about_content_third_card_file" 
               autoplay 
               playsinline 
               muted 
               loop></video>
             </div>
-            <h3 id="about_third_card_title"></h3>
-            <p id="about_third_card_text"></p>
+            <h3 id="about_content_third_card_title"></h3>
+            <p id="about_content_third_card_text"></p>
           </div>
         </div>
         <button id="expand" onclick="expand()">Show more</button>
@@ -139,7 +139,7 @@
               <div class="col">
                 <div class="video-container">
                   <iframe 
-                  id="courses_first_vid" 
+                  id="courses_content_first_course" 
                   frameborder="0"
                   allowfullscreen></iframe>
                 </div>
@@ -148,7 +148,7 @@
               <div class="col">
                 <div class="video-container">
                   <iframe 
-                  id="courses_second_vid" 
+                  id="courses_content_second_course" 
                   frameborder="0"
                   allowfullscreen></iframe>
                 </div>
@@ -157,7 +157,7 @@
               <div class="col">
                 <div class="video-container">
                   <iframe 
-                  id="courses_third_vid" 
+                  id="courses_content_third_course" 
                   frameborder="0"
                   allowfullscreen></iframe>
                 </div>
@@ -196,12 +196,12 @@
       </div>
       <div class="contact-icons">
         <div class="tooltip">
-          <i class="far fa-envelope" onclick="copy('rafbednarczuk@gmail.com')" onmouseout="outCopy()"></i>
+          <i class="far fa-envelope" onclick="copy('contact@proflutter.io')" onmouseout="outCopy()"></i>
           <span class="tooltiptext" id="mailTooltip">Copy to clipoboard</span>
         </div>
-        <a title="Instagram" href="" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-        <a title="YouTube" href="" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-        <a title="GitHub" href="" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+        <a style="display: none" title="Instagram" href="" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+        <a title="YouTube" href="https://www.youtube.com/c/ProFlutter" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+        <a title="GitHub" href="https://github.com/rafalbednarczuk/" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
       </div>
       <p>&copy; 2019 Pro Flutter - All rights reserved</p>
     </footer>

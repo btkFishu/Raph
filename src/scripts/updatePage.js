@@ -1,42 +1,74 @@
-const defaultConfig = {
-  'about_title': 'About Pro Flutter',
-  'about_text': 'Flutter is UI toolkit for Android, iOS, Desktop and Web which lets you create application for mulitple platforms from one codebase. Together we can become pro flutter developer and take your flutter applications on a whole nother level.',
-  'about_first_card_title': 'about_first_card_title',
-  'about_first_card_text': 'about_first_card_text',
-  'about_first_card_file': 'credit_card_16_9',
-  'about_second_card_title': 'about_second_card_title',
-  'about_second_card_text': 'about_second_card_text',
-  'about_second_card_file': 'credit_card_16_9',
-  'about_third_card_title': 'about_third_card_title',
-  'about_third_card_text': 'about_third_card_text',
-  'about_third_card_file': 'credit_card_16_9',
-  'courses_title': 'courses_title',
-  'courses_text': 'courses_text',
-  'courses_first_vid': 'L7mH__jfdjg',
-  'courses_second_vid': 'pFUEjJvgtUc',
-  'courses_third_vid': 'pFUEjJvgtUc',
-  'newsletter_title': 'Sign up for Newsletter',
-  'newsletter_text': 'Join our squad and be notified about all news. Master your skills with us.',
-}
+import * as defaultConfig from '../data'
 
-// get and update content
-Object.keys(defaultConfig).forEach((key) => {
-  const el = document.getElementById(key),
-        val = defaultConfig[key];
+// update content on the page
+Object.keys(defaultConfig).forEach((section) => {
+  let vb;
 
-  if(key.includes('_vid')) {
-    // update tutorial video src
-    const src = `https://www.youtube.com/embed/${ val }`;
-    el.src = src;
-  } 
-  else if(key.includes('_file')) {
-    // update src for about section video
-    const en = encodeURIComponent(val),
-          src = `https://firebasestorage.googleapis.com/v0/b/proflutter-e3263.appspot.com/o/${ en }.mp4?alt=media`;
-    el.src = src;
-  } 
-  else {
-    // update text content
-    el.innerText = val;
-  }
+  Object.keys(defaultConfig[section]).forEach((key) => {
+    const value = defaultConfig[section][key],
+          id = `${ section }_${ key }`;
+
+    if(key == 'visible' && value == false) {
+      // hide sections
+      const el = document.getElementById(section),
+            navEl = document.getElementsByClassName(`${ section }_nav`);
+      el.style.display = 'none';
+      
+      // hide navigation elements to hidden sections
+      for(const item of navEl) {
+        item.style.display = 'none';
+      }
+
+      vb = false;
+    }
+    else if(key == 'visible' && value == true) {
+      // prevent code from updating not visible content
+      vb = true;
+    }
+    else if(vb && (key == 'title' || key == 'text')) {
+      // set title and text
+      const el = document.getElementById(id);
+      el.innerText = value;
+    }
+    else if(vb && key == 'content') {
+      Object.keys(value).forEach((card) => {
+        const value = defaultConfig[section][key][card];
+
+        if(section == 'about') {
+          let vb;
+
+          Object.keys(value).forEach((element) => {
+            const value = defaultConfig[section][key][card][element],
+                  el = document.getElementById(`${ id }_${ card }_${ element }`);
+            
+            if(element == 'visible' && !value) {
+              // hide cards
+              el.style.display = 'none';
+              vb = false;
+            }
+            else if(element == 'visible' && value) {
+              // prevent code from updating not visible content
+              vb = true;
+            }
+            else if(vb && (element == 'title' || element == 'text')) {
+              // set title and text for each card
+              el.innerText = value;
+            }
+            else if(vb && element == 'file') {
+              // set src for each card
+              const en = encodeURIComponent(value),
+                    src = `https://firebasestorage.googleapis.com/v0/b/proflutter-e3263.appspot.com/o/${ en }.mp4?alt=media`;
+              el.src = src;
+            }
+          });
+        }
+        else if(section == 'courses') {
+          // set courses video src
+          const src = `https://www.youtube.com/embed/${ value }`,
+                el = document.getElementById(`${ id }_${ card }`);
+          el.src = src;
+        }
+      });
+    }
+  });
 });

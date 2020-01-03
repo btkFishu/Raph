@@ -1,7 +1,21 @@
+const aboutCards = document.querySelectorAll('#about .col');
+let numberOfCards = 0;
+
+aboutCards.forEach((el) => {
+  if(el.style.display != 'none') {
+    numberOfCards ++;
+  }
+});
+
+if(numberOfCards <= 1) {
+  const btn = document.getElementById('expand');
+  btn.style.display = 'none';
+}
+
 window.expand = function expand() {
   const btn = document.getElementById('expand');
-  const elements = document.querySelectorAll('#about .col');
-  elements.forEach((el, index) => {
+
+  aboutCards.forEach((el, index) => {
     if(index != 0) {
       el.classList.toggle('active');
     }
