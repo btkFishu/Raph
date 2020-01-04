@@ -26,8 +26,8 @@
   },
   "courses": {
     "visible": true,
-    "title": "courses_title",
-    "text": "courses_text",
+    "title": "Youtube",
+    "text": "latest youtube videos",
     "content": {
       "first_course": "L7mH__jfdjg",
       "second_course": "pFUEjJvgtUc",
