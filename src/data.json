@@ -2,22 +2,22 @@
   "about": {
     "visible": true,
     "title": "About Pro Flutter",
-    "text": "Flutter is UI toolkit for Android, iOS, Desktop and Web which lets you create application for mulitple platforms from one codebase. Together we can become pro flutter developer and take your flutter applications on a whole nother level.",
+    "text": "Flutter is UI toolkit for Android, iOS, Desktop and Web which lets you create application for multiple platforms from one codebase. Together we can become pro flutter developer and take your flutter applications on a whole nother level.",
     "content": {
       "first_card": {
-        "visible": true,
+        "visible": false,
         "title": "about_first_card_title",
         "text": "about_first_card_text",
         "file": "credit_card_16_9"
       },
       "second_card": {
-        "visible": true,
+        "visible": false,
         "title": "about_second_card_title",
         "text": "about_second_card_text",
         "file": "credit_card_16_9"
       },
       "third_card": {
-        "visible": true,
+        "visible": false,
         "title": "about_third_card_title",
         "text": "about_third_card_text",
         "file": "credit_card_16_9"
@@ -26,8 +26,8 @@
   },
   "courses": {
     "visible": true,
-    "title": "courses_title",
-    "text": "courses_text",
+    "title": "Youtube",
+    "text": "latest youtube videos",
     "content": {
       "first_course": "L7mH__jfdjg",
       "second_course": "pFUEjJvgtUc",
@@ -36,7 +36,7 @@
   },
   "newsletter": {
     "visible": true,
-    "title": "Sign up for Newsletterrrr",
+    "title": "Sign up for Newsletter",
     "text": "Join our squad and be notified about all news. Master your skills with us."
   }
 }
