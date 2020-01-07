@@ -28,7 +28,10 @@ Object.keys(defaultConfig).forEach((section) => {
     else if(vb && (key == 'title' || key == 'text')) {
       // set title and text
       const el = document.getElementById(id);
-      el.innerText = value;
+
+      if(el.innerText != value) {
+        el.innerText = value;
+      }
     }
     else if(vb && key == 'content') {
       Object.keys(value).forEach((card) => {
@@ -52,7 +55,9 @@ Object.keys(defaultConfig).forEach((section) => {
             }
             else if(vb && (element == 'title' || element == 'text')) {
               // set title and text for each card
-              el.innerText = value;
+              if(el.innerText != value) {
+                el.innerText = value;
+              }
             }
             else if(vb && element == 'file') {
               // set src for each card
