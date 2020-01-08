@@ -5,7 +5,7 @@
     "text": "Flutter is UI toolkit for Android, iOS, Desktop and Web which lets you create application for multiple platforms from one codebase. Together we can become pro flutter developer and take your flutter applications on a whole nother level.",
     "content": {
       "first_card": {
-        "visible": false,
+        "visible": true,
         "title": "about_first_card_title",
         "text": "about_first_card_text",
         "file": "credit_card_16_9"
