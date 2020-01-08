@@ -31,17 +31,31 @@ header {
 
 // slide images
 .slide-newsletter {
-  background: url('../images/header/header1-s.jpg') no-repeat center center;
+  background: url('../images/header/header1-xs.jpg') no-repeat center center;
 }
 .slide-courses {
-  background: url('../images/header/header2-s.jpg') no-repeat center center;
+  background: url('../images/header/header2-xs.jpg') no-repeat center center;
 }
 
 .slide-contact {
-  background: url('../images/header/header3-s.jpg') no-repeat center center;
+  background: url('../images/header/header3-xs.jpg') no-repeat center center;
 }
 
-@media only screen and (min-width: $mBP) and (max-width: 1199px) {
+@media only screen and (min-width: $xsBP) and (max-width: 1023px) {
+  .slide-newsletter {
+    background: url('../images/header/header1-s.jpg') no-repeat center center;
+  }
+
+  .slide-courses {
+    background: url('../images/header/header2-s.jpg') no-repeat center center;
+  }
+  
+  .slide-contact {
+    background: url('../images/header/header3-s.jpg') no-repeat center center;
+  }
+}
+
+@media only screen and (min-width: $lBP) and (max-width: 1979px) {
   .slide-newsletter {
     background: url('../images/header/header1-m.jpg') no-repeat center center;
   }
@@ -55,7 +69,7 @@ header {
   }
 }
 
-@media only screen and (min-width: $xlBP) {
+@media only screen and (min-width: 1980px) {
   .slide-newsletter {
     background: url('../images/header/header1-l.jpg') no-repeat center center;
   }
