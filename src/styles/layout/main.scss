@@ -190,20 +190,21 @@
     &:first-child {
       display: none;
 
-      @media only screen and (min-width: $lBP) {
+      @media only screen and (min-width: $xlBP) {
         display: block;
         align-self: center;
         max-width: 30%;
 
-        img {
-          width: 100%;
-          user-select: none;
+        .newsletter-image {
+          width: 366px;
+          height: 283px;
+          background: url('../images/newsletter.jpg') no-repeat center center;
         }
       }
     }
 
     &:last-child {
-      @media only screen and (min-width: $lBP) {
+      @media only screen and (min-width: $xlBP) {
         max-width: 65%;
       }
     }
