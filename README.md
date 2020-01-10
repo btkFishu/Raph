@@ -1,7 +1,7 @@
 
 <h1 align="center">Pro Flutter</h1>
 <div align="center"><a target="_blank" href="https://proflutter.io/"><img height="64px" style="max-width: 100%" src="https://github.com/btkFishu/Pro-Flutter/blob/master/src/images/favicon/favicon-96x96.png"></a></div>
-<h4 align="center">Website for signing up to newsletter and sharing news about latest tutorials</h4>
+<h4 align="center">Website for signing up to newsletter and sharing news about latest tutorials. Can be found at https://proflutter.io/</h4>
 
 [![Build Status](https://travis-ci.com/pawelkaczoruk/Pro-Flutter.svg?branch=master)](https://travis-ci.com/pawelkaczoruk/Pro-Flutter)
 
