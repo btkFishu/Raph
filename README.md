@@ -30,7 +30,7 @@
 ## Update page:
 To update page content modify **data.json** file:
 
-* Visibility of section or other element can be changed by modifying ***visible*** property value (true/false)
+* Visibility of section or any element can be changed by modifying ***visible*** property value (true/false)
 * Text and title of each section can be modified by changing corresponding ***text*** and ***title*** property values
-* Youtube course video can be changed by modifying youtube video ID inside either of ***first_course***, ***second_course*** or ***third_course*** property value
+* Youtube course video can be changed by modifying youtube video ID inside either ***first_course***, ***second_course*** or ***third_course*** property value
 * Videos in about section cards can be set by changing ***file*** property value to the name of video uploaded to firebase storage
